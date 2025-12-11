@@ -1,8 +1,8 @@
 ---
 layout: default
-title: A-level
-nav_order: 3
+title: Pygame
+nav_order: 1
 has_children: true
 ---
 
-# A-level
+# Pygame
