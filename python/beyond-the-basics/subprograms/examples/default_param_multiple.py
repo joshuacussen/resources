@@ -6,5 +6,5 @@ def greet(name, greeting="Hello", uppercase=False):
         print(greeting)
 
 
-greet("Sim", "Aloha", True)
-greet("Shirley", uppercase=True)
+greet("Sim", "Aloha", True)  # "ALOHA, SIM!"
+greet("Shirley", uppercase=True)  # "HELLO, SHIRLEY!"
