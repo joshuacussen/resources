@@ -7,5 +7,5 @@ def format_name(first, last, uppercase=False):
     return name
 
 
-name = format_name("Ada", "Lovelace")                        # Ada Lovelace
+name = format_name("Ada", "Lovelace")  # Ada Lovelace
 upper_name = format_name("Ada", "Lovelace", uppercase=True)  # ADA LOVELACE
