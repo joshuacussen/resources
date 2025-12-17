@@ -8,17 +8,17 @@ has_children: true
 {% include article_header.md %}
 
 ## What
-Python allows setting default values for parameters in subprograms.
-Default parameters have values specified in the subprogram's signature; their values can be overridden when the subprogram is called.
+Default parameters allow parameters to be initialised with default values if no value is provided in the subprogram call.
+The default values of such parameters are specified in the subprogram signature; these default values can be overridden when the subprogram is called.
 
-Including a default value for a parameter makes the parameter optional, meaning any calls of the subprogram do not need to provide a value for that parameter.
-When an override value is not provided, the value of the parameter falls back to its default.
+Providing a default value for a parameter makes the parameter optional in subprogram calls.
+When an overriding value is not provided, the parameter is initialised with its default value.
 
 ## Why
 Default parameters are never mandatory, their inclusion is a design choice.
 
-By making a parameter optional and explicitly stating a default value, callers of a subprogram only need to provide values to parameters when they should differ from the default.
-This makes subprogram calls that use default parameters (and do not override them) shorter and more readable as their values are already included in the subprogram's definition.
+As providing a default value for a parameter makes the parameter optional in subprogram calls, callers of the subprogram only need to provide values to such parameters when they should differ from the default.
+This makes subprogram calls that use default parameters (and do not override them) shorter and can reduce repetition: rather than passing the same value again and again, the value is written once in the subprogram signature.
 
 ## Examples
 
@@ -41,6 +41,12 @@ The default value sets the initial state of the object when no explict value is 
 ```
 
 ## Things you should know
+### When to use
+Default parameters are only useful when sensible default values exist.
+There is no benefit to using default parameters that will be overridden all the time.
+
+Including default parameters suggests the normal behaviour of your subprograms so default parameters should be chosen intentionally.
+
 ### Ordering of parameters
 You cannot place required (positional) parameters after parameters with default values.
 For this reason, all default parameters must appear at the end of a subprogram's signature.
