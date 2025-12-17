@@ -24,13 +24,13 @@ This can make your code more readable.
 ### Return a tuple explicitly
 We could similarly return a list or dictionary.
 ```python
-{% include_relative examples/multiple-returns-explicit.py %}
+{% include_relative examples/multiple_returns_explicit.py %}
 ```
 
 ### Return a tuple implicitly
 Python does not require parentheses around the grouped values being returned, it groups them in a tuple automatically.
 ```python
-{% include_relative examples/multiple-returns-implicit.py %}
+{% include_relative examples/multiple_returns_implicit.py %}
 ```
 
 ### Things you should know
