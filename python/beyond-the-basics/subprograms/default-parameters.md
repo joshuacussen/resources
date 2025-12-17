@@ -51,7 +51,7 @@ Including default parameters suggests the normal behaviour of your subprograms s
 You cannot place required (positional) parameters after parameters with default values.
 For this reason, all default parameters must appear at the end of a subprogram's signature.
 
-Although default parameters can be passed positionally, it is generally clearer to use [keyword arguments](kwargs.md), especially when a subprogram has multiple default parameters.
+Although default parameters can be passed positionally, it is generally clearer to use [keyword arguments](kwargs), especially when a subprogram has multiple default parameters.
 
 The following example shows multiple default parameters being passed both positionally and using keyword arguments.
 Using keyword arguments makes it possible to ignore parameters whose default values you want to keep, and makes code more readable.
