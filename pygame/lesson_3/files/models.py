@@ -14,33 +14,33 @@ class Player:
         p_vy=0,
     ):
         self.rect = pygame.Rect(p_initial_x, p_initial_y, p_width, p_height)
-        self._speed = p_speed
-        self._max_speed = 10
-        self._color = p_color
-        self._vx = p_vx
-        self._vy = p_vy
+        self.__speed = p_speed
+        self.__max_speed = 10
+        self.__color = p_color
+        self.__vx = p_vx
+        self.__vy = p_vy
 
-    def _move(self):
+    def __move(self):
         """Move the Player by vx and vy"""
-        self.rect.x = self.rect.x + self._vx
-        self.rect.y = self.rect.y + self._vy
+        self.rect.x = self.rect.x + self.__vx
+        self.rect.y = self.rect.y + self.__vy
 
-    def _draw(self, screen):
+    def __draw(self, screen):
         """Draw the Player on the screen"""
-        pygame.draw.rect(screen, self._color, self.rect)
+        pygame.draw.rect(screen, self.__color, self.rect)
 
     def get_speed(self):
-        return self._speed
+        return self.__speed
 
     def update(self, screen):
         """Move and draw the Player"""
-        self._move()
-        self._draw(screen)
+        self.__move()
+        self.__draw(screen)
 
     def set_velocity(self, p_vx, p_vy):
         """Change velocities"""
-        self._vx = p_vx
-        self._vy = p_vy
+        self.__vx = p_vx
+        self.__vy = p_vy
 
     def reset_position(self):
         """Reset player to its starting position"""

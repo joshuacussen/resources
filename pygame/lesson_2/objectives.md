@@ -25,9 +25,9 @@ parent: Lesson 2
 - Represent movement using velocity components
 - Use iteration to update many objects each frame
 - Understand the separation of concerns between
-    - `update` (public, frame-level behaviour)
-    - `_move` (private, internal position/physics logic)
-    - `_draw` (private, internal rendering logic)
+    - `update()` (public, frame-level behaviour)
+    - `__move()` (private, internal position/physics logic)
+    - `__draw()` (private, internal rendering logic)
 
 
 ## Coordinates, edges, and boundaries

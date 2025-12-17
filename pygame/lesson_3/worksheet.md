@@ -54,7 +54,7 @@ Answer these questions by examining the code.
     - How does this relate to key presses in `main()`?
 1. What does `player.update(screen)` do each frame?
     - Why does the order of method calls inside `update()` matter?
-    - Why is this method public, but `_move()` and `_draw()` are private?
+    - Why is this method public, but `__move()` and `__draw()` are private?
 
 ## Modify
 Make changes to explore how the code works.
@@ -71,7 +71,7 @@ Make changes to explore how the code works.
     - The player should continue moving after the key is released
     - Hint: which line currently overwrites the velocity each frame?
 1. Stop the player leaving the window.
-    - Modify `_move()` so the player cannot move off-screen.
+    - Modify `__move()` so the player cannot move off-screen.
     - Use `rect.x`, `rect.y`, `rect.width`, and `rect.height`
     - The player should stop at the boundary, they should not bounce.
 1. Implement `increase_speed()`.
@@ -92,8 +92,8 @@ Your `Enemy` class must:
     - speed
 1. Implement:
     - a public `update(screen, player)` method
-    - a private `_move(player)` method
-    - a private `_draw(screen)` method
+    - a private `__move(player)` method
+    - a private `__draw(screen)` method
 1. Move toward the player's position each frame.
     - Hint: compare the enemy's x/y coordinates to the player's.
 1. Respect window boundaries and stop at the edges.
