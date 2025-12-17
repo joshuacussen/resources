@@ -51,10 +51,10 @@ Including default parameters suggests the normal behaviour of your subprograms s
 You cannot place required (positional) parameters after parameters with default values.
 For this reason, all default parameters must appear at the end of a subprogram's signature.
 
-Although default parameters can be passed positionally, it is generally clearer to supply them using named arguments, especially when a subprogram has multiple optional parameters.
+Although default parameters can be passed positionally, it is generally clearer to use [keyword arguments](kwargs.md), especially when a subprogram has multiple default parameters.
 
-The following example shows multiple default parameters being passed both positionally and using named arguments.
-Using named arguments makes it possible to ignore parameters whose default values you want to keep, and makes code more readable.
+The following example shows multiple default parameters being passed both positionally and using keyword arguments.
+Using keyword arguments makes it possible to ignore parameters whose default values you want to keep, and makes code more readable.
 ```python
 {% include_relative examples/default_param_multiple.py %}
 ```
