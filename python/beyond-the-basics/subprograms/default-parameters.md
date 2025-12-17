@@ -22,19 +22,19 @@ This makes subprogram calls that use default parameters (and do not override the
 
 ## Examples
 
-### Default parameter with simple value
+### Simple value
 The default value represents the most common use of the subprogram.
 ```python
 {% include_relative examples/default_param_greeting.py %}
 ```
 
-### Default parameters using boolean flags
+### Boolean flag
 The default value controls optional behaviour rather than storing required data; such boolean parameters are often called flags.
 ```python
 {% include_relative examples/default_param_boolean_flag.py %}
 ```
 
-### Default parameters in constructors
+### Constructor
 The default value sets the initial state of the object when no explict value is provided.
 ```python
 {% include_relative examples/default_param_constructor.py %}
