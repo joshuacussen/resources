@@ -20,4 +20,16 @@ The flexibility of ordering enabled by keyword arguments is extremely helpful wh
 
 ## Examples
 
-## Things you should know
+### Ordering parameters
+If you use keyword arguments for all the arguments in the subprogram call, the order does not matter at all.
+
+```python
+{% include_relative examples/kwargs_simple.py %}
+```
+
+### Default parameters
+Keyword arguments are useful and improve readability when using [default parameters](default-parameters).
+
+```python
+{% include_relative examples/kwargs_default_param.py %}
+```
