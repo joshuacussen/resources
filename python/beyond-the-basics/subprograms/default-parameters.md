@@ -47,7 +47,7 @@ There is no benefit to using default parameters that will be overridden all the 
 
 Including default parameters suggests the normal behaviour of your subprograms so default parameters should be chosen intentionally.
 
-### Ordering of parameters
+### Ordering parameters
 You cannot place required (positional) parameters after parameters with default values.
 For this reason, all default parameters must appear at the end of a subprogram's signature.
 
