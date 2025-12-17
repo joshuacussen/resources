@@ -34,7 +34,7 @@ Python does not require parentheses around the grouped values being returned, it
 ```
 
 ### Things you should know
-You are encouraged to question whether returning values grouped in a tuple is sensible.
+Grouping multiple return values in a tuple is not always sensible.
 Just because you can do it, doesn't mean that you should.
 
-When you start returning more than a couple of grouped values, it's probably time to start thinking about using a custom data structure/class to better organise your data.
+When you start returning more than a couple of values, it's probably time to think about using a more intentional data structure (e.g., a dictionary or a custom object) to better organise your data.
