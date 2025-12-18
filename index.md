@@ -6,8 +6,6 @@ nav_order: 1
 
 # Home
 
----
-
 This site contains reference material and lesson resources for GCSE and A-level Computer Science.
 
 The articles on this site assume secure knowledge of programming terminology.
