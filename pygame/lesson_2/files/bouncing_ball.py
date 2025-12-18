@@ -18,33 +18,33 @@ class Ball:
     def get_coords(self):
         return (self.x, self.y)
 
-    def _get_left(self):
+    def __get_left(self):
         return self.x - self.radius
 
-    def _get_right(self):
+    def __get_right(self):
         return self.x + self.radius
 
-    def _get_top(self):
+    def __get_top(self):
         return self.y - self.radius
 
-    def _get_bottom(self):
+    def __get_bottom(self):
         return self.y + self.radius
 
-    def _draw(self, screen):
+    def __draw(self, screen):
         pygame.draw.circle(screen, self.color, self.get_coords(), self.radius)
 
-    def _move(self, x_bounds, y_bounds):
+    def __move(self, x_bounds, y_bounds):
         # Check if the ball is out of bounds
-        if self._get_left() < x_bounds[0]:
+        if self.__get_left() < x_bounds[0]:
             self.vx = -self.vx
             self.x = x_bounds[0] + self.radius
-        elif self._get_right() > x_bounds[1]:
+        elif self.__get_right() > x_bounds[1]:
             self.vx = -self.vx
             self.x = x_bounds[1] - self.radius
-        if self._get_top() < y_bounds[0]:
+        if self.__get_top() < y_bounds[0]:
             self.vy = -self.vy
             self.y = y_bounds[0] + self.radius
-        elif self._get_bottom() > y_bounds[1]:
+        elif self.__get_bottom() > y_bounds[1]:
             self.vy = -self.vy
             self.y = y_bounds[1] - self.radius
 
@@ -52,8 +52,8 @@ class Ball:
         self.y = self.y + self.vy
 
     def update(self, screen, x_bounds, y_bounds):
-        self._move(x_bounds, y_bounds)
-        self._draw(screen)
+        self.__move(x_bounds, y_bounds)
+        self.__draw(screen)
 
 
 pygame.init()

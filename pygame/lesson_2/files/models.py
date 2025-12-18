@@ -6,15 +6,15 @@ class Ball:
         """Constructor"""
         # TODO: Implement constructor, storing all parameters in attributes
 
-    def _draw(self, screen):
+    def __draw(self, screen):
         """Draws the Ball on the screen"""
         # TODO: Implement!
 
-    def _move(self):
+    def __move(self):
         """Moves the Ball by vx and vy"""
         # TODO: Implement!
 
     def update(self, screen):
         """Move and draw the ball"""
-        self._move()
-        self._draw(screen)
+        self.__move()
+        self.__draw(screen)

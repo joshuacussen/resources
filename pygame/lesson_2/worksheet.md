@@ -18,9 +18,9 @@ Answer these questions by examining the code.
   - Why do the other parameters not have `=` signs?
   - What do the `=` signs mean?
 1. Why does the `Ball` object need all of the parameters as attributes? 
-1. Why are the `_draw()` and `_move()` methods private?
-1. Why does `update()` call both `_move()` and `_draw()`?
-1. Why does the `_draw()` method need `screen` as a parameter?
+1. Why are the `__draw()` and `__move()` methods private?
+1. Why does `update()` call both `__move()` and `__draw()`?
+1. Why does the `__draw()` method need `screen` as a parameter?
 
 ## Modify
 Make changes to explore how the code works.
@@ -36,30 +36,30 @@ Make changes to explore how the code works.
     | private   | `color` | tuple  | Colour in `(R, G, B)` format|
     | private   | `radius` | int | Size of the ball |
 
-2. Implement the `_draw()` method
-3. Implement the `_move()` method
+2. Implement the `__draw()` method
+3. Implement the `__move()` method
     - At this stage, **do not** implement bouncing
 
 
 
 ## Make
-1. Use the information below to implement the missing `get` methods (`get_coords()`, `_get_left()`, `_get_right()`, `_get_top()`, `_get_bottom()`).
+1. Use the information below to implement the missing `get` methods (`get_coords()`, `__get_left()`, `__get_right()`, `__get_top()`, `__get_bottom()`).
 
-    The `_get_<direction>()` methods should return the position of the ball's edge in that direction (hint: how can you use the ball's radius to work this out?).
+    The `__get_<direction>()` methods should return the position of the ball's edge in that direction (hint: how can you use the ball's radius to work this out?).
 
 | Visibility | Method Signature | Returns | Description |
 |-----------|------------------|---------|-------------|
 | public    | `get_coords()` | tuple[int, int] | Returns `(x, y)`, the ball’s current position |
-| private   | `_get_left()`   | int | Returns the x-coordinate of the left edge (`x - radius`) |
-| private   | `_get_right()`  | int | Returns the x-coordinate of the right edge (`x + radius`) |
-| private   | `_get_top()`    | int | Returns the y-coordinate of the top edge (`y - radius`) |
-| private   | `_get_bottom()` | int | Returns the y-coordinate of the bottom edge (`y + radius`) |
-| private   | `_draw(screen)` | None | Draws the ball on the given `screen` |
-| private   | `_move(x_bounds, y_bounds)` | None | Updates the ball’s position (later: add bouncing) |
-| public    | `update(screen, x_bounds, y_bounds)` | None | Calls `_move` then `_draw` each frame |
+| private   | `__get_left()`   | int | Returns the x-coordinate of the left edge (`x - radius`) |
+| private   | `__get_right()`  | int | Returns the x-coordinate of the right edge (`x + radius`) |
+| private   | `__get_top()`    | int | Returns the y-coordinate of the top edge (`y - radius`) |
+| private   | `__get_bottom()` | int | Returns the y-coordinate of the bottom edge (`y + radius`) |
+| private   | `__draw(screen)` | None | Draws the ball on the given `screen` |
+| private   | `__move(x_bounds, y_bounds)` | None | Updates the ball’s position (later: add bouncing) |
+| public    | `update(screen, x_bounds, y_bounds)` | None | Calls `__move` then `__draw` each frame |
 
 
-2. Once all the getters work, update `move` so the ball cannot leave the window.
+2. Once all the getters work, update `__move` so the ball cannot leave the window.
     - When the ball reaches and edge, it should bounce by reversing the appropriate velocity.
 
 You will need to update the `update()` method:
@@ -73,16 +73,16 @@ def update(self, screen, x_bounds, y_bounds):
         x_bounds: a tuple containing the lower and upper x bounds, e.g. (0, WIDTH)
         y_bounds: a tuple containing the lower and upper y bounds, e.g. (0, HEIGHT)
     """
-    self._move(x_bounds, y_bounds)
-    self._draw(screen)
+    self.__move(x_bounds, y_bounds)
+    self.__draw(screen)
 ```
 
 ## Extensions
 Complete these tasks in any order.
 
 ### Colour changing
-1. Implement a `_change_color(new_color)` method to change the ball's colour
-1. Modify `_move` so the ball changes colour each time it bounces.
+1. Implement a `__change_color(new_color)` method to change the ball's colour
+1. Modify `__move` so the ball changes colour each time it bounces.
 
 ### Inside-bounds?
 Implement a `inside_bounds(x_bounds, y_bounds)` method:
@@ -90,10 +90,10 @@ Implement a `inside_bounds(x_bounds, y_bounds)` method:
 - Returns False otherwise
 
 ### Randomised bounce velocities
-Change `_move()` so that, when the ball bounces, the velocity is slightly randomised.
+Change `__move()` so that, when the ball bounces, the velocity is slightly randomised.
 Make sure the ball cannot become frozen!
 
 ### Decaying velocity
 Create a `DecayingBall` class that inherits from `Ball`.
 - Add a new attribute, `decay_factor` (e.g., 0.9)
-- Override `_move()` so that velocity is scaled after each bounce
+- Override `__move()` so that velocity is scaled after each bounce

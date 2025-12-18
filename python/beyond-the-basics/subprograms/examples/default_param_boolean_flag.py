@@ -1,9 +1,7 @@
 def format_name(first, last, uppercase=False):
     name = f"{first} {last}"
-
     if uppercase:
         name = name.upper()
-
     return name
 
 
